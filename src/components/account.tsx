@@ -1,6 +1,7 @@
 "use client"
 import { useAccount, useDisconnect, useEnsAvatar, useEnsName } from 'wagmi'
 import { useState, useEffect } from "react"
+import Image from 'next/image';
 
 
 export function Account() {
@@ -21,7 +22,7 @@ export function Account() {
     <div className="flex flex-col items-center space-y-6 p-6 rounded-lg bg-white shadow-xl w-72">
       {/* Show ENS Avatar if available */}
       {ensAvatar && (
-        <img
+        <Image
           alt="ENS Avatar"
           src={ensAvatar}
           className="w-20 h-20 rounded-full border-4 border-gradient-to-r from-purple-500 to-pink-500 shadow-xl"

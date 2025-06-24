@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useReadContract } from "wagmi";
 import { abi } from "../abi/abi";
 import { PANAGRAM_CONTRACT_ADDRESS } from "../constant";
+import Image from "next/image";
 
 const GATEWAY = process.env.NEXT_PINATA_GATEWAY!;
 
@@ -110,7 +111,7 @@ function NFTCard({
       </h3>
       <p className="text-gray-600">Balance: {balance}</p>
       {imageUrl ? (
-        <img
+        <Image
           src={imageUrl}
           alt={`NFT ${tokenId}`}
           className="mt-4 max-w-full h-auto rounded-md"
